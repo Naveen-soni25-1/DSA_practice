@@ -1,5 +1,5 @@
 #list that needed to sort 
-my_list = [12,35,68,34,100,145,246,1726]
+my_list = [12, 35, 68, 34, 100, 145, 1, 2, 6, 246, 1726]
 
 def find_smallest(arr):
     #find smallest no. and return it
@@ -14,8 +14,9 @@ def find_smallest(arr):
 def selection_sort(arr):
     # return a sorted list
     new_arr = []
-    smallest = find_smallest(arr)
-    new_arr.append(arr.pop(smallest))
+    for _ in range(len(arr)):
+        smallest = find_smallest(arr)
+        new_arr.append(arr.pop(smallest))
     return new_arr
 
 print(selection_sort(my_list))
